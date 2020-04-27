@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83118497245268C5002C9847 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83118495245268C5002C9847 /* BarcodeScanner.swift */; };
+		83118498245268C5002C9847 /* BarcodeScanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83118496245268C5002C9847 /* BarcodeScanner.xib */; };
+		833D55E024564A0E00E8443B /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D55DF24564A0E00E8443B /* StatusMessage.swift */; };
+		833EA5C0245610EF005FD3B9 /* WebQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833EA5BF245610EF005FD3B9 /* WebQuery.swift */; };
 		83ECD4AE2452472A00615241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4AD2452472A00615241 /* AppDelegate.swift */; };
 		83ECD4B02452472A00615241 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4AF2452472A00615241 /* SceneDelegate.swift */; };
 		83ECD4B22452472A00615241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4B12452472A00615241 /* ViewController.swift */; };
-		83ECD4B52452472A00615241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ECD4B32452472A00615241 /* Main.storyboard */; };
 		83ECD4B72452472B00615241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ECD4B62452472B00615241 /* Assets.xcassets */; };
-		83ECD4BA2452472B00615241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ECD4B82452472B00615241 /* LaunchScreen.storyboard */; };
+		83ECD4C2245247B900615241 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4C1245247B900615241 /* Start.swift */; };
+		83FE057F2453944E00C01B3C /* ReviewBarcodeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */; };
+		83FE05812453978100C01B3C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE05802453978100C01B3C /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83118495245268C5002C9847 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
+		83118496245268C5002C9847 /* BarcodeScanner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarcodeScanner.xib; sourceTree = "<group>"; };
+		833D55DF24564A0E00E8443B /* StatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMessage.swift; sourceTree = "<group>"; };
+		833EA5BF245610EF005FD3B9 /* WebQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebQuery.swift; sourceTree = "<group>"; };
 		83ECD4AA2452472A00615241 /* SwiftCodingWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCodingWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ECD4AD2452472A00615241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83ECD4AF2452472A00615241 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83ECD4B12452472A00615241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		83ECD4B42452472A00615241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83ECD4B62452472B00615241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		83ECD4B92452472B00615241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83ECD4BB2452472B00615241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83ECD4C1245247B900615241 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBarcodeResults.swift; sourceTree = "<group>"; };
+		83FE05802453978100C01B3C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,15 @@
 				83ECD4AD2452472A00615241 /* AppDelegate.swift */,
 				83ECD4AF2452472A00615241 /* SceneDelegate.swift */,
 				83ECD4B12452472A00615241 /* ViewController.swift */,
-				83ECD4B32452472A00615241 /* Main.storyboard */,
 				83ECD4B62452472B00615241 /* Assets.xcassets */,
-				83ECD4B82452472B00615241 /* LaunchScreen.storyboard */,
 				83ECD4BB2452472B00615241 /* Info.plist */,
+				83ECD4C1245247B900615241 /* Start.swift */,
+				83118495245268C5002C9847 /* BarcodeScanner.swift */,
+				83118496245268C5002C9847 /* BarcodeScanner.xib */,
+				83FE05802453978100C01B3C /* Utility.swift */,
+				83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */,
+				833EA5BF245610EF005FD3B9 /* WebQuery.swift */,
+				833D55DF24564A0E00E8443B /* StatusMessage.swift */,
 			);
 			path = SwiftCodingWork;
 			sourceTree = "<group>";
@@ -125,9 +140,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83ECD4BA2452472B00615241 /* LaunchScreen.storyboard in Resources */,
 				83ECD4B72452472B00615241 /* Assets.xcassets in Resources */,
-				83ECD4B52452472A00615241 /* Main.storyboard in Resources */,
+				83118498245268C5002C9847 /* BarcodeScanner.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +152,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FE05812453978100C01B3C /* Utility.swift in Sources */,
+				83ECD4C2245247B900615241 /* Start.swift in Sources */,
+				833D55E024564A0E00E8443B /* StatusMessage.swift in Sources */,
+				83FE057F2453944E00C01B3C /* ReviewBarcodeResults.swift in Sources */,
 				83ECD4B22452472A00615241 /* ViewController.swift in Sources */,
 				83ECD4AE2452472A00615241 /* AppDelegate.swift in Sources */,
+				833EA5C0245610EF005FD3B9 /* WebQuery.swift in Sources */,
 				83ECD4B02452472A00615241 /* SceneDelegate.swift in Sources */,
+				83118497245268C5002C9847 /* BarcodeScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		83ECD4B32452472A00615241 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83ECD4B42452472A00615241 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		83ECD4B82452472B00615241 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83ECD4B92452472B00615241 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		83ECD4BC2452472B00615241 /* Debug */ = {
@@ -287,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275CA585J5;
 				INFOPLIST_FILE = SwiftCodingWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275CA585J5;
 				INFOPLIST_FILE = SwiftCodingWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
