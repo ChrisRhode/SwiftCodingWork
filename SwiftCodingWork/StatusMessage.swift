@@ -35,7 +35,9 @@ class StatusMessage: NSObject {
             // 11 pro max (x: 0, y: -88, width: 414, height: 896)
             // 8: (x: 0, y: -64, width: 375, height 667
             // iPad Air 3: (x:0, y: -74, width: 834, height: 1112
-            progressView = UIView(frame: CGRect(x: 2, y: 2, width: ourContentFrame.width - 4, height: 32))
+            // changing to do animation "sliding down" for initial message
+            //progressView = UIView(frame: CGRect(x: 2, y: 2, width: ourContentFrame.width - 4, height: 32))
+            progressView = UIView(frame: CGRect(x: 2, y: -30, width: ourContentFrame.width - 4, height: 32))
             lblView = UILabel(frame: CGRect(x: 4, y: 4, width: ourContentFrame.width-8, height: 24))
             DispatchQueue.main.async
                 {
@@ -43,15 +45,27 @@ class StatusMessage: NSObject {
                     self.lblView?.text = theMessage
                     self.progressView!.addSubview(self.lblView!)
                     self.parentView!.addSubview(self.progressView!)
-                    if (isLastMessage)
+                    let anim = UIViewPropertyAnimator(duration:0.5, curve:.linear)
                     {
-                        DispatchQueue.main.asyncAfter(deadline: .now()+1.0)
-                        {
-                            self.progressView?.removeFromSuperview()
-                        }
+                        self.progressView?.frame.origin.y = 2
                     }
+                    anim.addCompletion({_ in
+                        if (isLastMessage)
+                        {
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1.0)
+                            {
+                                let anim = UIViewPropertyAnimator(duration:0.5, curve: .linear)
+                                {
+                                    self.progressView?.frame.origin.y = -30
+                                }
+                                anim.addCompletion({_ in
+                                    self.progressView?.removeFromSuperview()})
+                                anim.startAnimation()
+                            }
+                        }
+                    })
+                    anim.startAnimation()
             }
-            
         }
         else
         {
@@ -63,7 +77,13 @@ class StatusMessage: NSObject {
                     {
                         DispatchQueue.main.asyncAfter(deadline: .now()+1.0)
                         {
-                            self.progressView?.removeFromSuperview()
+                            let anim = UIViewPropertyAnimator(duration:0.5, curve: .linear)
+                            {
+                                self.progressView?.frame.origin.y = -30
+                            }
+                            anim.addCompletion({_ in
+                                self.progressView?.removeFromSuperview()})
+                            anim.startAnimation()
                         }
                     }
             }

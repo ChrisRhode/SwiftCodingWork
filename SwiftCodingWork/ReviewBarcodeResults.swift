@@ -86,10 +86,11 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
         // for each UPC code, lookup either known value or possible values
         
         progressMessage = StatusMessage(withView: self.view)
-        progressMessage?.setMessage(theMessage: "Loading data from server, please wait...", withMessageType: .isInProgress, isLastMessage: false)
+        self.progressMessage?.setMessage(theMessage: "Loading data from server, please wait...", withMessageType: .isInProgress, isLastMessage: false)
+        
         DispatchQueue.global(qos: .utility).async {
-            //sleep(1)
-            
+            sleep(1) // gives the initial progress message time to finish displaying
+           
             self.barcodeValuesLastNdx = self.barcodeValues.count - 1
             self.setupToGetDescriptionOfNextBarcode()
             
