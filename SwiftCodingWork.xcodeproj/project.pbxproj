@@ -16,6 +16,7 @@
 		83ECD4B22452472A00615241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4B12452472A00615241 /* ViewController.swift */; };
 		83ECD4B72452472B00615241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ECD4B62452472B00615241 /* Assets.xcassets */; };
 		83ECD4C2245247B900615241 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECD4C1245247B900615241 /* Start.swift */; };
+		83FDB3A62458FDF900587F0A /* WebQueryUsingPOST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDB3A52458FDF900587F0A /* WebQueryUsingPOST.swift */; };
 		83FE057F2453944E00C01B3C /* ReviewBarcodeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */; };
 		83FE05812453978100C01B3C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE05802453978100C01B3C /* Utility.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		83ECD4B62452472B00615241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83ECD4BB2452472B00615241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83ECD4C1245247B900615241 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		83FDB3A52458FDF900587F0A /* WebQueryUsingPOST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebQueryUsingPOST.swift; sourceTree = "<group>"; };
 		83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBarcodeResults.swift; sourceTree = "<group>"; };
 		83FE05802453978100C01B3C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				83FE057E2453944E00C01B3C /* ReviewBarcodeResults.swift */,
 				833EA5BF245610EF005FD3B9 /* WebQuery.swift */,
 				833D55DF24564A0E00E8443B /* StatusMessage.swift */,
+				83FDB3A52458FDF900587F0A /* WebQueryUsingPOST.swift */,
 			);
 			path = SwiftCodingWork;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				83FE057F2453944E00C01B3C /* ReviewBarcodeResults.swift in Sources */,
 				83ECD4B22452472A00615241 /* ViewController.swift in Sources */,
 				83ECD4AE2452472A00615241 /* AppDelegate.swift in Sources */,
+				83FDB3A62458FDF900587F0A /* WebQueryUsingPOST.swift in Sources */,
 				833EA5C0245610EF005FD3B9 /* WebQuery.swift in Sources */,
 				83ECD4B02452472A00615241 /* SceneDelegate.swift in Sources */,
 				83118497245268C5002C9847 /* BarcodeScanner.swift in Sources */,
@@ -293,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ratcliffe.SwiftCodingWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -313,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ratcliffe.SwiftCodingWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

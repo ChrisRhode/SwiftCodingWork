@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
+class ReviewBarcodeResults: UITableViewController,WebQueryUsingPOSTPassbackDelegate {
     
     struct JSONresponseToLookupUPC: Decodable
     {
@@ -30,7 +30,7 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
     
     var descriptionValues : [String] = []
     
-    var WebQueryInstance : WebQuery?
+    var WebQueryInstance : WebQueryUsingPOST?
     var progressMessage: StatusMessage?
     
     //var progressView: UIView?
@@ -48,17 +48,6 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
         }
         super.init(style: .plain)
     }
-    
-    // work out progress status indicator
-    
-    /*
-     override init(style:UITableView.Style)
-     {
-     // put code here
-     super.init(style:style)
-     
-     }
-     */
     
     required init?(coder: NSCoder)
     {
@@ -80,7 +69,7 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        WebQueryInstance = WebQuery()
+        WebQueryInstance = WebQueryUsingPOST()
         WebQueryInstance?.delegate = self
         
         // for each UPC code, lookup either known value or possible values
@@ -94,17 +83,7 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
             self.barcodeValuesLastNdx = self.barcodeValues.count - 1
             self.setupToGetDescriptionOfNextBarcode()
             
-            /*
-             while (ndx <= lastNdx)
-             {
-             //let thisUPC = self.barcodeValues[ndx]
-             self.progressMessage?.setMessage(theMessage: "Loading (\(ndx+1)) of (\(lastNdx+1))", withMessageType: .isInProgress, isLastMessage: false)
-             
-             sleep(1)
-             ndx += 1
-             }
-             self.progressMessage?.setMessage(theMessage: "Done", withMessageType: .isSuccessful, isLastMessage: true)
-             */
+
         }
     }
     
@@ -125,7 +104,7 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
         WebQueryInstance?.doQuery(theURL: url, theParameters: params)
     }
     
-    func doWebQueryPassBack(dataReceived: String)
+    func doWebQueryUsingPOSTPassBack(dataReceived: String)
     {
         let range : Range<String.Index> = dataReceived.range(of : "\r\n\r\n<!DOCTYPE html>")!
         let redoneString = dataReceived[..<range.lowerBound]
@@ -157,8 +136,6 @@ class ReviewBarcodeResults: UITableViewController,WebQueryPassbackDelegate {
             //this will be a fatal error
         }
         
-        //descriptionValues[barcodeValuesCurrNdx] = dataReceived
-        //descriptionValues.append(dataReceived)
         barcodeValuesCurrNdx += 1
         if (barcodeValuesCurrNdx <= barcodeValuesLastNdx)
         {

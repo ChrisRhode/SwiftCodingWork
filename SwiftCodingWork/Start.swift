@@ -10,44 +10,44 @@ import UIKit
 
 // ** (4) reference protocols
 class Start: UITableViewController,BarcodeScannerPassbackDelegate {
-
+    
     override init(style:UITableView.Style)
-       {
+    {
         // put code here
-           super.init(style:style)
-           
-       }
+        super.init(style:style)
+        
+    }
     required init?(coder: NSCoder)
-       {
-             fatalError("init(coder:) not supported")
-       }
+    {
+        fatalError("init(coder:) not supported")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // ** fix to use reusable cells ASAP
-       // let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        // let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         let cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "MainListCell")
         cell.accessoryType = .none
         let thisRow = indexPath.row
@@ -57,10 +57,10 @@ class Start: UITableViewController,BarcodeScannerPassbackDelegate {
             cell.textLabel?.text = "Scan barcodes with camera"
         default:
             // ** throw exception instead
-             cell.textLabel?.text = "Error!"
+            cell.textLabel?.text = "Error!"
         }
-
-  
+        
+        
         return cell
     }
     
@@ -75,28 +75,28 @@ class Start: UITableViewController,BarcodeScannerPassbackDelegate {
             let tmp = BarcodeScanner()
             tmp.delegate = self
             self.navigationController?.pushViewController(tmp, animated: true)
- 
+            
             /*
-            var theList : [String]  = []
-            theList.append("051000224767")
-            theList.append("042272005130")
-            theList.append("728028064469")
-            let tmp = ReviewBarcodeResults.init(withListOfBarcodeValues: theList)
-            self.navigationController?.pushViewController(tmp, animated: true)
- */
+             var theList : [String]  = []
+             theList.append("051000224767")
+             theList.append("042272005130")
+             theList.append("728028064469")
+             let tmp = ReviewBarcodeResults.init(withListOfBarcodeValues: theList)
+             self.navigationController?.pushViewController(tmp, animated: true)
+             */
         default:
             // ** throw exception instead
             fatalError("error!")
         }
-
+        
     }
     
     // ** (6) implement delegate callbacks
     func doBarcodeScannerPassBack(barcodeValuesSeen: [String], didTapCancel: Bool) {
         
-          self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: false)
         let tmp = ReviewBarcodeResults(withListOfBarcodeValues: barcodeValuesSeen)
-         self.navigationController?.pushViewController(tmp, animated: true)
+        self.navigationController?.pushViewController(tmp, animated: true)
         
         
     }

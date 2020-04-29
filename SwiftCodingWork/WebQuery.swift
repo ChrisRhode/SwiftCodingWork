@@ -5,7 +5,8 @@
 //  Created by Christopher Rhode on 4/26/20.
 //  Copyright © 2020 Christopher Rhode. All rights reserved.
 //
-
+// *** this is/was a debugging version that used GET, until I could get POST working
+// *** in general will use WebQueryUsingPOST moving forward wherever possible
 import UIKit
 
 protocol WebQueryPassbackDelegate: class {
